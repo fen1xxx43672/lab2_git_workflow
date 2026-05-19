@@ -1,11 +1,12 @@
-def add(a: float, b: float) -> float:
-    """Return sum of a and b."""
-    if not isinstance(a, (int, float)) or not isinstance(b, (int, float)):
-        raise TypeError("Arguments must be numbers")
+VERSION = "1.0"
+
+def add(a, b):
     return a + b
 
-def subtract(a: float, b: float) -> float:
-    """Return difference of a and b."""
-    if not isinstance(a, (int, float)) or not isinstance(b, (int, float)):
-        raise TypeError("Arguments must be numbers")
+def subtract(a, b):
     return a - b
+
+def divide(a, b):
+    if b == 0:
+        raise ValueError("Cannot divide by zero")
+    return a / b
